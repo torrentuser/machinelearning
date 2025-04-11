@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 # import seaborn as sns
 
-boston = pd.read_csv('/opt/anaconda3/envs/machinelearning/1.csv') # 在此处使用绝对路径导入csv文件
+boston = pd.read_csv('~/1.csv') # 在此处使用绝对路径导入csv文件
 boston.dropna(inplace=True)
 X = pd.DataFrame(np.c_[boston['LSTAT'], boston['RM']], columns = ['LSTAT','RM'])
 Y = boston['MEDV']
