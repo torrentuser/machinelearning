@@ -58,7 +58,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # 训练模型，迭代 10 个周期
-model.fit(train_images, train_labels, epochs=10)
+model.fit(train_images, train_labels, epochs=200)
 
 # 在测试集上评估模型性能
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
@@ -69,7 +69,7 @@ probability_model = tf.keras.Sequential([model,
                                          tf.keras.layers.Softmax()])
 
 # 对测试集进行预测
-predictions = probability_model.predict(test_images)
+predictions = probability_model.predict(test_images) 
 predictions[0]  # 打印第一个测试样本的预测结果
 np.argmax(predictions[0])  # 获取预测的类别索引
 test_labels[0]  # 打印第一个测试样本的真实标签
