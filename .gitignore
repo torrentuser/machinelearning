@@ -53,3 +53,6 @@ Makefile
 
 # Ignore JetBrains IDE project files
 .idea/
+
+# Ignore Python cache files
+__pycache__/
